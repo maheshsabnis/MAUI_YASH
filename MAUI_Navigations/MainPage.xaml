@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MAUI_Navigations"
+             x:Class="MAUI_Navigations.MainPage"
+             >
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <Label
+                Text=".NET MAUI Rouiting"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <ListView x:Name="lstContacts"
+                       ItemsSource="{Binding Details}"
+                       ItemSelected="lstContacts_ItemSelected"
+                     
+                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding ContactId}"/>
+                                <Label Text="{Binding Name}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+
+            <Button
+                x:Name="btnNavigateToFirst"
+                Text="First View"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="btnNavigateToFirst_Clicked"
+                HorizontalOptions="Center" />
+            <Button
+                x:Name="btnNavigateToSecond"
+                Text="Second View"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="btnNavigateToSecond_Clicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

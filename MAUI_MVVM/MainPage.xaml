@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:MAUI_MVVM.Models"
+             xmlns:viewModel="clr-namespace:MAUI_MVVM.ViewModel"
+             x:DataType="viewModel:ExpensesViewModel"
+             x:Class="MAUI_MVVM.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Text="Enter Expenses Details" Grid.Column="0" Grid.Row="0"/>
+                <Entry Grid.Column="1" Grid.Row="0" Text="{Binding ExpensesObject.ExpenseDetails}"/>
+                <Label Text="Paid Amount" Grid.Column="0" Grid.Row="1"/>
+                <Entry Grid.Column="1" Grid.Row="1" Text="{Binding ExpensesObject.ExpenseAmount}"/>
+                <Label Text="Paid To" Grid.Column="0" Grid.Row="2"/>
+                <Entry Grid.Column="1" Grid.Row="2" Text="{Binding ExpensesObject.PaidTo}"/>
+            
+                <!--The Command Object Binding with Button-->
+                <Button  Grid.Column="0" Grid.Row="3"
+                x:Name="btnSaveExpenses"
+                Text="Save Expenses"
+                HorizontalOptions="Center" 
+                          Command="{Binding RecordNewExpenseCommand}"
+                         />
+                
+                <Button  Grid.Column="1" Grid.Row="3"
+                x:Name="btnGetExpenses"
+                Text="Get Expenses"
+                HorizontalOptions="Center" 
+                           Command="{Binding GetExpensesCommand}"
+                         />
+            </Grid>
+            <ListView
+                VerticalScrollBarVisibility="Default"
+                HorizontalScrollBarVisibility="Default"
+                HeightRequest="300"
+                ItemsSource="{Binding AllExpenses}">
+                <ListView.ItemTemplate>
+                    <!--The Expenses Object-->
+                    <DataTemplate x:DataType="{x:Type model:Expenses}">
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding ExpenseDetails}"></Label>
+                                <Label Text="{Binding ExpenseAmount}"></Label>
+                                <Label Text="{Binding PaidTo}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>    
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
