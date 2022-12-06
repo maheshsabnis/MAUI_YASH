@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MAUI_RESTClient.Models"
+             x:Class="MAUI_RESTClient.MainPage"
+             x:DataType="{x:Type local:Expenses}">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Text="Enter Expenses Details" Grid.Column="0" Grid.Row="0"/>
+                <Entry Grid.Column="1" Grid.Row="0" Text="{Binding ExpensesDetails}"/>
+                <Label Text="Paid Amount" Grid.Column="0" Grid.Row="1"/>
+                <Entry Grid.Column="1" Grid.Row="1" Text="{Binding ExpensesAmount}"/>
+                <Label Text="Paid To" Grid.Column="0" Grid.Row="2"/>
+                <Entry Grid.Column="1" Grid.Row="2" Text="{Binding PaidTo}"/>
+
+               
+                <Button  Grid.Column="0" Grid.Row="3"
+                x:Name="btnSaveExpenses"
+                Text="Save Expenses"
+                HorizontalOptions="Center" 
+                          Clicked="btnSaveExpenses_Clicked"
+                         />
+
+                <Button  Grid.Column="1" Grid.Row="3"
+                x:Name="btnGetExpenses"
+                Text="Get Expenses"
+                HorizontalOptions="Center" 
+                            Clicked="btnGetExpenses_Clicked"
+                         />
+            </Grid>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -19,7 +19,15 @@
 			- Command Object, To Listen an event raised or dispatched from View and Handle it
 		- CommunityToolkit.Mvvm
 	- REST API Calls
-		
+		- System.Net.Http.Json namespace
+			- .NET 5+
+				- HttpClient with Extension Methods
+				- GetFromJsonAsync<T>(URL);
+					- T is the Type of Response Received from Service
+				- PostAsJsonAsync<T>(URL, T)
+					- T is the Data to be posted
+				- PutAsJsonAsync<T>(URL, T);
+				- DeleteAsJsonAsync<T>(URL);
 	- Dependency Injection
 	- Navigation
 		- Routing.ResgisterRoute("URL", ViewTypeName)
