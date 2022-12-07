@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<full-backup-content>
+	<!--The COnfiguration will make sure that the contents of Secure Storage are available across all Application-->
+	<include domain="sharedpref" path="."/>
+	<include domain="sharedpref" path="${applicationId}.mauiessentials.xml"/>
+</full-backup-content>

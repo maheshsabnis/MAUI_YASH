@@ -8,7 +8,9 @@ namespace MAUI_RESTClient
     {
         // Specify the Service URL as per the Platform (This is MAndatory for Android Emulator)
 
-        public static string APIBaseAddress = DeviceInfo.Platform == DevicePlatform.Android ? "http://10.0.2.2:5000" : "http://localhost:5000"; 
+        //public static string APIBaseAddress = DeviceInfo.Platform == DevicePlatform.Android ? "http://10.0.2.2:5000" : "http://localhost:5000";
+
+        public static string APIBaseAddress = "https://expensesservicemaui.azurewebsites.net";
 
 
        Expenses expenses;

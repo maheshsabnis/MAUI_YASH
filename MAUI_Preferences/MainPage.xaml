@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI_Preferences.MainPage"
+              Loaded="ContentPage_Loaded"
+             xmlns:local="clr-namespace:MAUI_Preferences" 
+             x:DataType="local:MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label
+                Text="Using the MAUI Preferences"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <StackLayout>
+                <Label Text="Can The App Receive Notifications?" FontSize="Body" TextColor="Red"/>
+                <Switch IsToggled="{Binding CanReceiveNotifications}"/>
+                
+            </StackLayout>                 
+
+            <Button
+                x:Name="btnSaveChoice"
+                Text="Save Choice"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="btnSaveChoice_Clicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

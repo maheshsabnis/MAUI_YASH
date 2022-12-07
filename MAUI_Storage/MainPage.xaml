@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI_Storage.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+           
+
+            
+
+            <Label
+                Text="Using the Secure Storage in .NET MAUI"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Entry x:Name="entryCreateKey" Placeholder="Enter a Key To be Created and Saved" FontSize="Medium"/>
+
+            <Button
+                x:Name="btnCreateKey"
+                Text="Create Key"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="btnCreateKey_Clicked"
+                HorizontalOptions="Center" />
+
+
+            <Entry x:Name="entryGetKey" Placeholder="Once Clicked on Button the Key will be retrived" FontSize="Medium"/>
+
+            <Button
+                x:Name="btnReteieveKey"
+                Text="Retrieve Key"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="btnReteieveKey_Clicked"
+                HorizontalOptions="Center" />
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

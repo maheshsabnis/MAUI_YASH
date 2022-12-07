@@ -8,7 +8,7 @@ namespace ExpensesService.Controllers
     [ApiController]
     public class ExpensesController : ControllerBase
     {
-        ExpenseDb expenses;
+        static ExpenseDb expenses;
 
         public ExpensesController()
         {
