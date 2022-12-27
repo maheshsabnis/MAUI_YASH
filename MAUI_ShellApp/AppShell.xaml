@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MAUI_ShellApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MAUI_ShellApp"
+    Shell.FlyoutBehavior="Locked">
+
+    <Shell.FlyoutHeader>
+        <VerticalStackLayout>
+            <Label Text="Header" FontSize="Large"/>
+        </VerticalStackLayout>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="Flyout 1" FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent
+        Title="Home 1.1"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+        <ShellContent
+        Title="Home 1.2"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+        <ShellContent
+        Title="Home 1.3"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Flyout 2">
+        <ShellContent
+        Title="Home 2.0"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    </FlyoutItem>   
+    
+
+    <Shell.FlyoutFooter>
+        <VerticalStackLayout>
+            <Label Text="Footer" FontSize="Large"/>
+        </VerticalStackLayout>
+    </Shell.FlyoutFooter>
+
+    <!--<TabBar>
+        <Tab Title="Home" Icon="homepage">
+            <ShellContent
+        Title="Home 1"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+        </Tab>
+        <Tab Title="Home" Icon="kite">
+            <ShellContent
+        Title="Home 2"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+        </Tab>
+    </TabBar>--> 
+   
+
+</Shell>

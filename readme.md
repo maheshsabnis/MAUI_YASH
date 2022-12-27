@@ -1,3 +1,4 @@
+
 # MAUI Apps
 
 1. Application Development
@@ -121,7 +122,35 @@
 		- SMS
 3. MAUI Specific Features
 	- MainThread
+	- AppActions
+		- Microsoft.Maui.ApplicationModel
+			- IAppActions
+			- AppActions
+		- Android Platform
+			- Apply the following on MainActivity class in Platforms folder in Andoid Subfolder 
+			- IntentFilter Attribute class with following parameters
+				- Platform.Intent.ActionAppAction object
+					- The ShortCut UI for the Application Icon
+				- Categories
+					- Andoird.Content.Intent.CategoeryDefault
+						- Timer based UI
+		-  Override the OnNewIntent()
+			- Activate the Timer based ShortCut and execute it
+		- Essential Configuration
+			- Create a AppAction object in Maui Builder Object
+				- AddAppAction(new AppAction("Identitfier", "LableText", icon:"[[Naame of the png file in the images sub folder of Resources folder]]" ));
+
+		- We must fetch the Page (or view) associated with AppAction action on 'MainThread'
+			- Responsible to Execute a code on Main UI Thread
 	- Handlers
 	- Custom Controls
+		- Rules for re-Usable Elements
+			- Use Standard UI Elements as per the Need with their Properties, Events, and Handlers
+		- Take Create of Creating Bindable Properties so that the Custom COntrol can communicate with its container	
+		- Try to reduce the UI generation complexity by making use of 'Frame' so that the custom control, can support TemplateBinding
+	- Shell
+		- The Page Objewct that provides 'Stack' for Loading and managing navigation across multiple pages
+			- Appearing Event
+			- Disappearing Event
 	- Performance
 4. Publishing
