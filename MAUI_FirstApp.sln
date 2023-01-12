@@ -27,13 +27,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAUI_HandlersApp", "MAUI_Ha
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAUI_AppActions", "MAUI_AppActions\MAUI_AppActions.csproj", "{BA9BC911-7D5E-41D6-9FF1-A73985D4A73B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAUI_ShellApp", "MAUI_ShellApp\MAUI_ShellApp.csproj", "{27206857-49EA-4548-AB9D-5840E0828237}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAUI_ShellApp", "MAUI_ShellApp\MAUI_ShellApp.csproj", "{27206857-49EA-4548-AB9D-5840E0828237}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAUI_OpenBrowser", "MAUI_OpenBrowser\MAUI_OpenBrowser.csproj", "{74815690-E07B-4DF0-B077-F090F07A5B59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAUI_OpenBrowser", "MAUI_OpenBrowser\MAUI_OpenBrowser.csproj", "{74815690-E07B-4DF0-B077-F090F07A5B59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAUI_Contacts", "MAUI_Contacts\MAUI_Contacts.csproj", "{D093BCE6-A6B0-46A6-AA11-6714014F6477}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAUI_Contacts", "MAUI_Contacts\MAUI_Contacts.csproj", "{D093BCE6-A6B0-46A6-AA11-6714014F6477}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAUI_UnitTest", "MAUI_UnitTest\MAUI_UnitTest.csproj", "{34F60628-8E58-4CC1-8CC0-68BC2C732896}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAUI_MultiBinding", "MAUI_MultiBinding\MAUI_MultiBinding.csproj", "{3BB048AB-998D-4824-BC59-A7CA4F8411EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -115,6 +117,12 @@ Global
 		{34F60628-8E58-4CC1-8CC0-68BC2C732896}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34F60628-8E58-4CC1-8CC0-68BC2C732896}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34F60628-8E58-4CC1-8CC0-68BC2C732896}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BB048AB-998D-4824-BC59-A7CA4F8411EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BB048AB-998D-4824-BC59-A7CA4F8411EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BB048AB-998D-4824-BC59-A7CA4F8411EF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3BB048AB-998D-4824-BC59-A7CA4F8411EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BB048AB-998D-4824-BC59-A7CA4F8411EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BB048AB-998D-4824-BC59-A7CA4F8411EF}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
